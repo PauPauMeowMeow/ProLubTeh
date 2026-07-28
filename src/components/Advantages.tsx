@@ -30,7 +30,7 @@ export default function Advantages() {
                 <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand text-white shadow-lg shadow-brand/30">
                   <Icon className="h-8 w-8" />
                 </div>
-                <h3 className="mb-4 text-lg font-semibold text-ink">
+                <h3 className="mb-4 min-h-[3.5rem] text-lg font-semibold text-ink">
                   {adv.title}
                 </h3>
                 <p className="text-base leading-relaxed text-ink-light">
