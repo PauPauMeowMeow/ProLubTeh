@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #f5914f;
+  --color-brand-dark: #e07d3a;
+  --color-brand-light: #fef3eb;
+  --color-ink: #1f2937;
+  --color-ink-light: #6b7280;
+  --color-surface: #f9fafb;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white shadow-lg shadow-brand/30 transition-all duration-200 hover:bg-brand-dark hover:shadow-xl hover:shadow-brand/40 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand bg-transparent px-6 py-3 font-semibold text-brand transition-all duration-200 hover:bg-brand hover:text-white active:scale-95;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 sm:py-20 lg:px-8;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-7xl;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
